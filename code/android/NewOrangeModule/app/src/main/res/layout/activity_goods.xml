@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_goods"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yangjian.neworangemodule.activity.GoodsActivity">
+
+    <ImageView
+        android:id="@+id/iv_module_image"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:src="@drawable/paq5"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_module_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="橙方智能模块"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="让科技改变生活，改变世界！"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_module_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¥100"
+            android:textColor="#CD0000"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#F0F0F0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="服务："
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="橙方甄选精品"
+                android:layout_marginTop="10dp"
+                android:textColor="#0F0F0F"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="限时免邮"
+                android:layout_marginTop="10dp"
+                android:textColor="#0F0F0F"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="由 深圳橙方智能有限公司 发货并提供售后"
+                android:layout_marginTop="10dp"
+                android:textColor="#0F0F0F"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#F0F0F0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#ffffff">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/logo"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="深圳橙方智能有限公司"
+            android:textColor="#0F0F0F"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#F0F0F0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/device_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:textColor="#555555"
+                android:text="收藏"
+                android:drawableTop="@drawable/store" />
+
+            <RadioButton
+                android:id="@+id/shop_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:textColor="#555555"
+                android:text="购物车"
+                android:drawableTop="@drawable/shoppingcar" />
+
+            <RadioButton
+                android:id="@+id/mine_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:text="立即购买"
+                android:background="@android:color/holo_red_light"/>
+
+            <RadioButton
+                android:background="#FFA07A"
+                android:id="@+id/mine_btn2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:text="加入购物车" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</LinearLayout>

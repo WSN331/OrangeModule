@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yangjian.neworangemodule.activity.FrameActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="24小时框架电量变化"
+        android:textSize="20sp" />
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/frame_chart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#D4D4D4"/>
+
+</LinearLayout>

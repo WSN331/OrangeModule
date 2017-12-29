@@ -9,8 +9,8 @@
         <module name="HelloIdea" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="HelloIdea" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="HelloIdea" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
