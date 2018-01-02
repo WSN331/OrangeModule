@@ -1,4 +1,4 @@
-package cn.wsn331.orangemodule.console;
+package cn.wsn331.om.console;
 
 /**
  * @author GongTengPangYi
