@@ -227,4 +227,17 @@ public class User extends Entity {
     public void setIcon(String icon) {
         this.icon = icon == null ? null : icon.trim();
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", account='" + account + '\'' +
+                ", password='" + password + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", name='" + name + '\'' +
+                ", createTime=" + createTime +
+                ", icon='" + icon + '\'' +
+                '}';
+    }
 }

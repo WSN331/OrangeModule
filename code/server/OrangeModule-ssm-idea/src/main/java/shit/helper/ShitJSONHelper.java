@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import shit.helper.json.*;
+import shit.helper.json.netsf.ShitJSONInitByNetSf;
 
 /**
  * JSON的工具类，便利处理JSON相关的内容
@@ -17,7 +18,7 @@ public class ShitJSONHelper {
 	/**
 	 * JSON单元驱动器
 	 */
-	public static ShitJSONInit<?, ?> driver;
+	public static ShitJSONInit<?, ?> driver = new ShitJSONInitByNetSf();
 	
 	/**
 	 * 不能被用来当分隔符号的特殊符号

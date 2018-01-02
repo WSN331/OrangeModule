@@ -71,7 +71,7 @@ public class ShitObservableHelper {
 	 * @return
 	 */
 	@SafeVarargs
-	public static <T> ShitObservable<T> just(T... list) {
+	public static <T> ShitObservable<T> just(final T... list) {
 		return create(new OnSubscriber<T>() {
 
 			@Override

@@ -46,7 +46,7 @@ public class ShitObservableImpl<T> implements ShitObservable<T> {
 	}
 
 	@Override
-	public void subscribe(ShitSubscriber<T> subscriber) {
+	public void subscribe(final ShitSubscriber<T> subscriber) {
 		subscribeScheduler.execute(new Runnable() {
 
 			@Override
@@ -72,7 +72,7 @@ public class ShitObservableImpl<T> implements ShitObservable<T> {
 	}
 
 	@Override
-	public <E> ShitObservableImpl<E> filter(ShitObservableDataFilter<T, E> dataFilter) {
+	public <E> ShitObservableImpl<E> filter(final ShitObservableDataFilter<T, E> dataFilter) {
 		return filter(new ShitSubscriberFilter<T, E>() {
 
 			@Override
@@ -88,11 +88,11 @@ public class ShitObservableImpl<T> implements ShitObservable<T> {
 	}
 
 	@Override
-	public <E> ShitObservableImpl<E> filter(ShitSubscriberFilter<T, E> shitSubscriberFilter) {
+	public <E> ShitObservableImpl<E> filter(final ShitSubscriberFilter<T, E> shitSubscriberFilter) {
 		return new ShitObservableImpl<E>(new OnSubscriber<E>() {
 
 			@Override
-			public void call(ShitSubscriber<E> subscriber) {
+			public void call(final ShitSubscriber<E> subscriber) {
 
 				subscribe(new ShitSubscriber<T>() {
 
@@ -122,11 +122,11 @@ public class ShitObservableImpl<T> implements ShitObservable<T> {
 	}
 
 	@Override
-	public ShitObservableImpl<T> observerOn(Scheduler scheduler) {
+	public ShitObservableImpl<T> observerOn(final Scheduler scheduler) {
 		return filter(new ShitSubscriberFilter<T, T>() {
 
 			@Override
-			public void filterNext(T t, ShitSubscriber<T> subscriber) {
+			public void filterNext(final T t, final ShitSubscriber<T> subscriber) {
 				scheduler.execute(new Runnable() {
 
 					@Override
@@ -137,7 +137,7 @@ public class ShitObservableImpl<T> implements ShitObservable<T> {
 			}
 
 			@Override
-			public void filterComplete(T t, ShitSubscriber<T> subscriber) {
+			public void filterComplete(final T t, final ShitSubscriber<T> subscriber) {
 				scheduler.execute(new Runnable() {
 
 					@Override
@@ -150,7 +150,7 @@ public class ShitObservableImpl<T> implements ShitObservable<T> {
 	}
 
 	@Override
-	public ShitObservableImpl<T> timer(int num, int type) {
+	public ShitObservableImpl<T> timer(final int num, final int type) {
 		return filter(new ShitSubscriberFilter<T, T>() {
 
 			@Override
