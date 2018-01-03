@@ -1,47 +1,41 @@
 package shit.ssm1.mybatis;
 
-import shit.helper.ShitReflectHelper;
-
-import javax.annotation.Resource;
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * @author GongTengPangYi
  */
-public class BaseServiceImpl<T extends Serializable, E extends Serializable> implements BaseService<T, E> {
+public abstract class BaseServiceImpl<T extends Serializable, E extends Serializable> implements BaseService<T, E> {
 
-    protected Class<T> entityClass;
+    public abstract BaseMapper<T, E> getMapper();
 
-    @Resource(name = "baseMapper")
-    private BaseMapper baseMapper;
-
-    public BaseServiceImpl() {
-        this.entityClass = ShitReflectHelper.getSuperClassGenericType(getClass(), 0);
+    @Override
+    public int deleteByPrimaryKey(E id) {
+        return getMapper().deleteByPrimaryKey(id);
     }
 
     @Override
-    public void save(T t) {
-
+    public int insert(T record) {
+        return getMapper().insert(record);
     }
 
     @Override
-    public void update(T t) {
-
+    public int insertSelective(T record) {
+        return getMapper().insertSelective(record);
     }
 
     @Override
-    public boolean delete(T t) {
-        return false;
+    public T selectByPrimaryKey(E id) {
+        return getMapper().selectByPrimaryKey(id);
     }
 
     @Override
-    public T findById(E e) {
-        return null;
+    public int updateByPrimaryKeySelective(T record) {
+        return getMapper().updateByPrimaryKeySelective(record);
     }
 
     @Override
-    public List<T> findAll() {
-        return null;
+    public int updateByPrimaryKey(T record) {
+        return updateByPrimaryKey(record);
     }
 }

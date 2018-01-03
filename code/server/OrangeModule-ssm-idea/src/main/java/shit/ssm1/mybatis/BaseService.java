@@ -9,14 +9,16 @@ import java.util.List;
  */
 public interface BaseService<T extends Serializable, E extends Serializable> {
 
-    public void save(T t);
+    int deleteByPrimaryKey(E id);
 
-    public void update(T t);
+    int insert(T record);
 
-    public boolean delete(T t);
+    int insertSelective(T record);
 
-    public T findById(E e);
+    T selectByPrimaryKey(E id);
 
-    public List<T> findAll();
+    int updateByPrimaryKeySelective(T record);
+
+    int updateByPrimaryKey(T record);
 
 }
