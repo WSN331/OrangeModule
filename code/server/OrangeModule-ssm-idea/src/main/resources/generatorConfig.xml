@@ -44,84 +44,89 @@
         </javaClientGenerator>
 
         <!-- 要生成哪些表 -->
-        <table tableName="t_config" domainObjectName="Config" enableCountByExample="false" enableUpdateByExample="false"
+        <table tableName="t_user_login" domainObjectName="UserLogin" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;Config,Integer&gt;" />
+            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;UserLogin,Integer&gt;" />
             <columnRenamingRule searchString="^C" replaceString=""/>
         </table>
-        <table tableName="t_device" domainObjectName="Device" enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;Device,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
-        <table tableName="t_device_attr" domainObjectName="DeviceAttr" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;DeviceAttr,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
-        <table tableName="t_shopping_car" domainObjectName="ShoppingCar" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;ShoppingCar,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
-        <table tableName="t_trade" domainObjectName="Trade" enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;Trade,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
-        <table tableName="t_trade_order" domainObjectName="TradeOrder" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;TradeOrder,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
-        <table tableName="t_trade_order_single" domainObjectName="TradeOrderSingle" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;TradeOrderSingle,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
-        <table tableName="t_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;User,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
-        <table tableName="t_user_device" domainObjectName="UserDevice" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;UserDevice,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
-        <table tableName="d_air_quality" domainObjectName="AirQuality" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;AirQuality,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
-        <table tableName="d_formaldehyde" domainObjectName="Formaldehyde" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;Formaldehyde,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
-        <table tableName="d_frame" domainObjectName="Frame" enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;Frame,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
-        <table tableName="d_u_disk" domainObjectName="UDisk" enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;UDisk,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
-        <table tableName="d_water_quality" domainObjectName="WaterQuality" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;WaterQuality,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
+        <!--<table tableName="t_config" domainObjectName="Config" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;Config,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="t_device" domainObjectName="Device" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;Device,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="t_device_attr" domainObjectName="DeviceAttr" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;DeviceAttr,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="t_shopping_car" domainObjectName="ShoppingCar" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;ShoppingCar,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="t_trade" domainObjectName="Trade" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;Trade,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="t_trade_order" domainObjectName="TradeOrder" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;TradeOrder,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="t_trade_order_single" domainObjectName="TradeOrderSingle" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;TradeOrderSingle,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="t_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;User,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="t_user_device" domainObjectName="UserDevice" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;UserDevice,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="d_air_quality" domainObjectName="AirQuality" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;AirQuality,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="d_formaldehyde" domainObjectName="Formaldehyde" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;Formaldehyde,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="d_frame" domainObjectName="Frame" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;Frame,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="d_u_disk" domainObjectName="UDisk" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;UDisk,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="d_water_quality" domainObjectName="WaterQuality" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;WaterQuality,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
 
     </context>
 </generatorConfiguration>

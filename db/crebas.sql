@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2018/1/2 星期二 11:04:23                        */
+/* Created on:     2018/1/15 星期一 14:41:17                       */
 /*==============================================================*/
 
 
@@ -31,6 +31,8 @@ drop table if exists T_TRADE_ORDER_SINGLE;
 drop table if exists T_USER;
 
 drop table if exists T_USER_DEVICE;
+
+drop table if exists T_USER_LOGIN;
 
 /*==============================================================*/
 /* Table: D_AIR_QUALITY                                         */
@@ -208,6 +210,18 @@ create table T_USER_DEVICE
    C_DEVICE_ID          int,
    C_USER_ID            int,
    C_CREATE_DATE        date,
+   primary key (C_ID)
+);
+
+/*==============================================================*/
+/* Table: T_USER_LOGIN                                          */
+/*==============================================================*/
+create table T_USER_LOGIN
+(
+   C_ID                 int not null auto_increment,
+   C_USER_ID            int,
+   C_CREATE_DATE        date,
+   C_ACCESS_TOKEN       varchar(128),
    primary key (C_ID)
 );
 

@@ -17,4 +17,9 @@ public class UserServiceImpl extends BaseServiceImpl<User, Integer> implements U
     public BaseMapper<User, Integer> getMapper() {
         return userMapper;
     }
+
+    @Override
+    public User findByAccount(String account) {
+        return userMapper.selectByAccount(account);
+    }
 }
