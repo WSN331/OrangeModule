@@ -51,4 +51,6 @@ public interface ConfigMapper extends BaseMapper<Config, Integer> {
      * @mbggenerated
      */
     int updateByPrimaryKey(Config record);
+
+    Config selectByKey(String key);
 }

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
     <classPathEntry
-            location="C:/Users/ASUS/.m2/repository/mysql/mysql-connector-java/5.1.30/mysql-connector-java-5.1.30.jar"/>
+            location="C:/Users/Administrator/.m2/repository/mysql/mysql-connector-java/5.1.30/mysql-connector-java-5.1.30.jar"/>
     <context id="test" targetRuntime="MyBatis3">
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
 
@@ -44,11 +44,11 @@
         </javaClientGenerator>
 
         <!-- 要生成哪些表 -->
-        <table tableName="t_user_login" domainObjectName="UserLogin" enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;UserLogin,Integer&gt;" />
-            <columnRenamingRule searchString="^C" replaceString=""/>
-        </table>
+        <!--<table tableName="t_user_login" domainObjectName="UserLogin" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;UserLogin,Integer&gt;" />-->
+            <!--<columnRenamingRule searchString="^C" replaceString=""/>-->
+        <!--</table>-->
         <!--<table tableName="t_config" domainObjectName="Config" enableCountByExample="false" enableUpdateByExample="false"-->
                <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
             <!--<property name="rootInterface" value="shit.ssm1.mybatis.BaseMapper&lt;Config,Integer&gt;" />-->

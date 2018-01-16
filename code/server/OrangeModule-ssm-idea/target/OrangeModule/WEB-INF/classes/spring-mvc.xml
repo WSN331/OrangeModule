@@ -11,6 +11,18 @@
                         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
     <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
     <context:component-scan base-package="cn.wsn331.om.client.controller" />
+
+    <mvc:interceptors>
+        <!-- 对所有请求都拦截，公共拦截器可以有多个 -->
+        <bean name="commonInterceptor" class="cn.wsn331.om.client.interceptor.CommonInterceptor" />
+        <!--<mvc:interceptor>-->
+            <!--&lt;!&ndash; 对/test.html进行拦截 &ndash;&gt;-->
+            <!--<mvc:mapping path="/test.html"/>-->
+            <!--&lt;!&ndash; 特定请求的拦截器只能有一个 &ndash;&gt;-->
+            <!--<bean class="cn.zifangsky.interceptor.TestInterceptor" />-->
+        <!--</mvc:interceptor>-->
+    </mvc:interceptors>
+
     <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
     <bean id="mappingJacksonHttpMessageConverter"
           class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">

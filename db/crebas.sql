@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2018/1/15 星期一 14:41:17                       */
+/* Created on:     2018/1/16 星期二 16:05:15                       */
 /*==============================================================*/
 
 
@@ -18,8 +18,6 @@ drop table if exists T_CONFIG;
 
 drop table if exists T_DEVICE;
 
-drop table if exists T_DEVICE_ATTR;
-
 drop table if exists T_SHOPPING_CAR;
 
 drop table if exists T_TRADE;
@@ -29,8 +27,6 @@ drop table if exists T_TRADE_ORDER;
 drop table if exists T_TRADE_ORDER_SINGLE;
 
 drop table if exists T_USER;
-
-drop table if exists T_USER_DEVICE;
 
 drop table if exists T_USER_LOGIN;
 
@@ -42,6 +38,8 @@ create table D_AIR_QUALITY
    C_ID                 int not null auto_increment,
    C_PM25               float,
    C_CREATE_TIME        datetime,
+   C_USER_ID            int,
+   C_DEVICE_ID          int,
    primary key (C_ID)
 );
 
@@ -55,6 +53,8 @@ create table D_FORMALDEHYDE
    C_INDOOR_TEMPERATURE float,
    C_OUTDOOR_TEMPERATURE float,
    C_CREATE_TIME        datetime,
+   C_USER_ID            int,
+   C_DEVICE_ID          int,
    primary key (C_ID)
 );
 
@@ -67,6 +67,8 @@ create table D_FRAME
    C_ELECTRIC_QUANTITY  float,
    C_VOLTAGE            float,
    C_CREATE_TIME        datetime,
+   C_USER_ID            int,
+   C_DEVICE_ID          int,
    primary key (C_ID)
 );
 
@@ -79,6 +81,8 @@ create table D_U_DISK
    C_SPACE              float,
    C_USED_SPACE         float,
    C_CREATE_TIME        datetime,
+   C_USER_ID            int,
+   C_DEVICE_ID          int,
    primary key (C_ID)
 );
 
@@ -90,6 +94,8 @@ create table D_WATER_QUALITY
    C_ID                 int not null auto_increment,
    C_TDS                float,
    C_CREATE_TIME        datetime,
+   C_USER_ID            int,
+   C_DEVICE_ID          int,
    primary key (C_ID)
 );
 
@@ -100,6 +106,7 @@ create table T_CONFIG
 (
    C_ID                 int not null auto_increment,
    C_NAME               varchar(50),
+   C_KEY                varchar(50),
    C_VALUE              varchar(50),
    primary key (C_ID)
 );
@@ -112,18 +119,6 @@ create table T_DEVICE
    C_ID                 int not null auto_increment,
    C_CODE               varchar(50),
    C_NAME               varchar(50),
-   primary key (C_ID)
-);
-
-/*==============================================================*/
-/* Table: T_DEVICE_ATTR                                         */
-/*==============================================================*/
-create table T_DEVICE_ATTR
-(
-   C_ID                 int not null auto_increment,
-   C_CODE               varchar(50),
-   C_NAME               varchar(50),
-   C_DEVICE_ID          int,
    primary key (C_ID)
 );
 
@@ -193,23 +188,10 @@ create table T_USER
 (
    C_ID                 int not null auto_increment,
    C_ACCOUNT            varchar(11),
-   C_PASSWORD           varchar(50),
    C_NICKNAME           varchar(50),
    C_NAME               varchar(50),
    C_CREATE_TIME        datetime,
    C_ICON               varchar(50),
-   primary key (C_ID)
-);
-
-/*==============================================================*/
-/* Table: T_USER_DEVICE                                         */
-/*==============================================================*/
-create table T_USER_DEVICE
-(
-   C_ID                 int not null auto_increment,
-   C_DEVICE_ID          int,
-   C_USER_ID            int,
-   C_CREATE_DATE        date,
    primary key (C_ID)
 );
 
@@ -220,7 +202,7 @@ create table T_USER_LOGIN
 (
    C_ID                 int not null auto_increment,
    C_USER_ID            int,
-   C_CREATE_DATE        date,
+   C_CREATE_TIME        datetime,
    C_ACCESS_TOKEN       varchar(128),
    primary key (C_ID)
 );

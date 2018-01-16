@@ -34,6 +34,13 @@
       <!-- 表示开发的时候引入，发布的时候不会加载此包 -->
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>cn.leancloud</groupId>
+      <artifactId>java-sdk</artifactId>
+      <version>0.1.6</version>
+    </dependency>
+
     <!-- spring核心包 -->
     <dependency>
       <groupId>org.springframework</groupId>

@@ -36,6 +36,6 @@ public abstract class BaseServiceImpl<T extends Serializable, E extends Serializ
 
     @Override
     public int updateByPrimaryKey(T record) {
-        return updateByPrimaryKey(record);
+        return getMapper().updateByPrimaryKey(record);
     }
 }

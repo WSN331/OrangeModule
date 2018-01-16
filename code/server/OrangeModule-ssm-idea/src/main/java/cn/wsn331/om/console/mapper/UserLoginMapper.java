@@ -65,4 +65,6 @@ public interface UserLoginMapper extends BaseMapper<UserLogin, Integer> {
      * @mbggenerated
      */
     int updateByPrimaryKey(UserLogin record);
+
+    int deleteByUserId(Integer userId);
 }

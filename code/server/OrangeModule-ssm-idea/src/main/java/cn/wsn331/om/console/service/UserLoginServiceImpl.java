@@ -24,6 +24,11 @@ public class UserLoginServiceImpl extends BaseServiceImpl<UserLogin, Integer> im
     }
 
     @Override
+    public void deleteByUserId(Integer userId) {
+        userLoginMapper.deleteByUserId(userId);
+    }
+
+    @Override
     public BaseMapper<UserLogin, Integer> getMapper() {
         return userLoginMapper;
     }

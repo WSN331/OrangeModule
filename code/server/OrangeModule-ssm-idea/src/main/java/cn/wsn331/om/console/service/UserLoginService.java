@@ -8,4 +8,6 @@ public interface UserLoginService extends BaseService<UserLogin, Integer> {
     UserLogin findByUserId(Integer userId);
 
     UserLogin findByAccessToken(String accessToken);
+
+    void deleteByUserId(Integer userId);
 }
