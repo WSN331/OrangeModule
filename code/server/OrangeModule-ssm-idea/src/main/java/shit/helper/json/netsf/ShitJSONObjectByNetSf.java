@@ -1,7 +1,10 @@
 package shit.helper.json.netsf;
 
 import net.sf.json.JSONObject;
+import shit.helper.json.ShitJSONArray;
 import shit.helper.json.ShitJSONObject;
+
+import java.util.Set;
 
 /**
  * 更据net.sf.json包来完成JSONObject
@@ -19,6 +22,11 @@ public class ShitJSONObjectByNetSf extends ShitJSONObject<JSONObject> {
 	public ShitJSONObjectByNetSf() {
 		super();
 		jsonObject = new JSONObject();
+	}
+
+	public ShitJSONObjectByNetSf(JSONObject jsonObject) {
+		super();
+		this.jsonObject = jsonObject;
 	}
 
 	@Override
@@ -40,8 +48,27 @@ public class ShitJSONObjectByNetSf extends ShitJSONObject<JSONObject> {
 	}
 
 	@Override
+	public ShitJSONObject<JSONObject> getJSONObject(String key) {
+		ShitJSONObjectByNetSf jobj = new ShitJSONObjectByNetSf();
+		jobj.setJSONObject(jsonObject.getJSONObject(key));
+		return jobj;
+	}
+
+	@Override
+	public ShitJSONArray getJSONArray(String key) {
+		ShitJSONArrayByNetSf array = new ShitJSONArrayByNetSf();
+		array.setJSONArray(jsonObject.getJSONArray(key));
+		return array;
+	}
+
+	@Override
 	public void remove(String key) {
 		jsonObject.remove(key);
+	}
+
+	@Override
+	public Set<String> keySet() {
+		return jsonObject.keySet();
 	}
 
 	@Override

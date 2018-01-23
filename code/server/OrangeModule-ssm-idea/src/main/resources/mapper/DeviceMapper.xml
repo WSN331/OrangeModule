@@ -100,4 +100,11 @@
       C_NAME = #{name,jdbcType=VARCHAR}
     where C_ID = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="selectByCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_device
+    where C_CODE = #{code,jdbcType=VARCHAR}
+  </select>
 </mapper>

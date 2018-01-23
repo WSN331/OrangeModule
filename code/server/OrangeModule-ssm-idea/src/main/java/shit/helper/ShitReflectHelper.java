@@ -44,6 +44,18 @@ public class ShitReflectHelper {
 		stringCastTypeMap.put(clazz, stringCast);
 	}
 
+	public static Object newInstance(Class<?> clazz) throws ShitReflectException {
+		try {
+			return clazz.newInstance();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+			throw new ShitReflectException("\nReflectHelper.newInstance：无法实例化" + ".\n");
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+			throw new ShitReflectException("\nReflectHelper.newInstance：参数不对" + ".\n");
+		}
+	}
+
 	/**
 	 * 初始化对象
 	 * 
@@ -60,15 +72,7 @@ public class ShitReflectHelper {
 	public static Object newInstance(Class<?> clazz, Class<?>[] parameterTypes, Object... params)
 			throws ShitReflectException {
 		if (parameterTypes.length == 0) {
-			try {
-				return clazz.newInstance();
-			} catch (InstantiationException e) {
-				e.printStackTrace();
-				throw new ShitReflectException("\nReflectHelper.newInstance：无法实例化" + ".\n");
-			} catch (IllegalAccessException e) {
-				e.printStackTrace();
-				throw new ShitReflectException("\nReflectHelper.newInstance：参数不对" + ".\n");
-			}
+			return newInstance(clazz);
 		} else {
 			Constructor<?> constructor;
 			try {

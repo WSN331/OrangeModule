@@ -1,5 +1,7 @@
 package shit.helper.json;
 
+import java.util.List;
+
 /**
  * JSON的线性数组
  * 
@@ -8,7 +10,7 @@ package shit.helper.json;
  * @param <T>
  *            JSONArray
  */
-public abstract class ShitJSONArray<T> {
+public abstract class ShitJSONArray<T> implements List{
 
 	/**
 	 * JSONArray类对象
@@ -33,12 +35,7 @@ public abstract class ShitJSONArray<T> {
 		this.jsonArray = jsonArray;
 	}
 
-	/**
-	 * 添加数组的值
-	 * 
-	 * @param value
-	 */
-	public abstract void add(Object value);
+	public abstract ShitJSONArray<T> fromString(String str);
 
 	/**
 	 * 获取对应字符串

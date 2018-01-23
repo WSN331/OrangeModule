@@ -51,4 +51,6 @@ public interface DeviceMapper extends BaseMapper<Device, Integer> {
      * @mbggenerated
      */
     int updateByPrimaryKey(Device record);
+
+    Device selectByCode(String code);
 }
