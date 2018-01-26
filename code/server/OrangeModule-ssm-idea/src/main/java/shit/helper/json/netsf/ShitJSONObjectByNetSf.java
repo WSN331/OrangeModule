@@ -34,6 +34,10 @@ public class ShitJSONObjectByNetSf extends ShitJSONObject<JSONObject> {
 		try {
 			if (TYPES.indexOf(obj.getClass().getName()) >= 0) {
 				jsonObject.put(key, obj);
+			} else if (obj instanceof ShitJSONObject) {
+				jsonObject.put(key, ((ShitJSONObject)obj).getJSONObject());
+			} else if (obj instanceof ShitJSONArray) {
+				jsonObject.put(key, ((ShitJSONArray)obj).getJSONArray());
 			} else {
 				jsonObject.put(key, JSONObject.fromObject(obj));
 			}
